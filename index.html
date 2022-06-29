@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather page</title>
+    <meta charset="UTF-8" /> 
+   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  
+    <link href="src/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+    </br>
+      <div class="weather-app">
+        <form class="search-form" id="search-form">
+          <div class="row">
+            <div class="col-6">
+              <input
+              type="text"
+              class="form-control"
+              placeholder="Enter the city"
+              aria-label="Recipient's username"
+              aria-describedby="button-addon2"
+              id="city-input"              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="Search"
+                class="form-control btn btn-secondary shadow-sm w-100"
+              />
+            </div>
+            <div class="col-3">
+              <button
+                class="btn btn-info w-100"
+                id="current-location-button"
+              >
+                Current location
+              </button>
+            </div>
+          </div>
+        </form>
+      </br>
+      <h3>
+          Weather in
+         <span id="cityName"> Kyiv </span>
+           for today
+      </h3>
+      <div class="date" id="dayTime">
+        05.06.22 Saturday 
+        <div> 15:08 </div>
+    </div>
+      </div>
+      </br>
+    
+          <div class="row">
+              <div class="col main_weather_day"> 
+               <img src="images/image1.png" alt="cool"> <div> <span class="temperature" id="temperature">17</span>  
+                <a href="#" id="c-link">°C</a> |
+                <a href="#" id="f-link">°F</a> 
+            </div> 
+              <div class="cool" id="description"> Cool </div>
+             </div>    
+            <div class="col-2 weather_day"> 
+              <div> 
+                <img src="images/image2.png" class="weather_pic" alt="warm"> 
+              </div> 19°C
+              <div>Warm</div>
+            </div>
+            <div class="col-2 weather_day"> 
+              <div>
+                <img src="images/image1.png" class="weather_pic" alt="cool">
+              </div>
+              15°C
+              <div>Cool</div>
+            </div>
+            <div class="col-2 weather_day">
+              <div>
+                <img src="images/image3.png" class="weather_pic" alt="cool">
+              </div>
+              16°C
+            <div>Cool</div>
+            </div>
+            <div class="col-2 weather_day">
+              <div>
+                <img src="images/image4.png" class="weather_pic" alt="warm">
+              </div>
+              21°C
+            <div>Warm</div>
+            </div>
+            <div class="col-2 weather_day">
+              <div>
+                <img src="images/image4.png" class="weather_pic" alt="hot">
+              </div>
+              26°C
+             <div>Hot</div>
+            </div>
+          </div>
+      
+          <div class="row">
+              <div class="col-4">Probability of precipitation 
+                <div class="data">10%</div>
+              </div>
+              <div class="col indicators" >Wind
+                <div class="data"> <span id="wind">2</span> m/s</div>
+              </div>
+              <div class="col indicators" >Pressure
+                <div class="data" > <span id="pressure">1050</span> hPa</div>
+              </div>
+              <div class="col indicators" >Humidity
+                <div class="data"> <span id="humidity">67</span> % </div>
+              </div>
+              <div class="col indicators">Feels like
+                <div class="data"> <span id="feels_like">16</span> °C</div>
+              </div>
+          </div>
+          </br>
+          <a href="https://www.shecodes.io/students" target="_blank">Open-source code</a> by Diana Kariuk
+        </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

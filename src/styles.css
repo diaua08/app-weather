@@ -1,0 +1,72 @@
+.container {
+  font-family: "Quicksand", sans-serif;
+  width: 55%;
+  background-color: #e3e3f8;
+}
+
+h3,
+.date {
+  text-align: center;
+  color: #0f0e75;
+}
+
+span {
+  font-size: larger;
+  color: purple;
+  text-shadow: 1px 0 1px #000;
+}
+
+.date {
+  margin-bottom: 20px;
+}
+
+.main_weather_pic {
+  width: 50px;
+}
+
+.weather_pic {
+  width: 25px;
+}
+
+.weather_day,
+.main_weather_day {
+  display: block;
+  text-align: center;
+}
+
+.weather_day {
+  font-size: small;
+}
+
+a {
+  text-decoration: none;
+  font-size: 21px;
+}
+
+.cool {
+  position: relative;
+  font-size: 16px;
+}
+
+.main_weather_day {
+  font-weight: 700;
+  font-size: large;
+  border: 2px solid rgb(50, 17, 128);
+  padding: 15px;
+  position: relative;
+  left: 10px;
+  top: -25px;
+}
+
+.data {
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.indicators {
+  border-left: 2px solid #5ab2e8;
+}
+
+a{
+  font-size: medium;
+}
