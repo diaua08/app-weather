@@ -45,6 +45,9 @@ function showWeatherCond(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
+
+  celciusTemperature = response.data.main.temp;
+
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -58,8 +61,6 @@ function showWeatherCond(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 
-  // let temperature = Math.round(response.data.main.temp);
-  // newTemp.innerHTML = `${temperature}° in ${response.data.name}`;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
@@ -83,16 +84,23 @@ function handleSubmit(event) {
 let cityName = document.querySelector("#search-form");
 cityName.addEventListener("submit", searchCity);
 
+let celciusTemperature = null;
+
 function changeToF(event) {
   event.preventDefault();
+  let fTemp = (celciusTemperature * 9) / 5 + 32;
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 63;
+  cLink.classList.remove("active");
+  fLink.classList.add("active");
+  temperatureElement.innerHTML = Math.round(fTemp);
 }
 
 function changeToC(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 17;
+  cLink.classList.add("active");
+  fLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
 
 let fLink = document.querySelector("#f-link");

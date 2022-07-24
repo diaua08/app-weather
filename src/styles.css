@@ -72,3 +72,12 @@ a {
 a {
   font-size: medium;
 }
+
+.main_weather_day .active {
+  color: #000;
+  cursor: default;
+}
+
+.main_weather_day .active:hover {
+  text-decoration: none;
+}
