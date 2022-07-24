@@ -2,6 +2,8 @@
   font-family: "Quicksand", sans-serif;
   width: 55%;
   background-color: #e3e3f8;
+  border: 2px solid #5ab2e8;
+  border-radius: 12px;
 }
 
 h3,
@@ -67,6 +69,6 @@ a {
   border-left: 2px solid #5ab2e8;
 }
 
-a{
+a {
   font-size: medium;
 }
