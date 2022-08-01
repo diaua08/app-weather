@@ -126,3 +126,33 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `   
+
+<div class=" col-2 weather-forecast" id="forecast"> 
+<div> 
+    <div class="weather-forecast-date">${day}</div>
+  <img src="images/image2.png" class="weather_pic" alt="warm"> 
+</div> 
+<div class="weather-forecast-temperatures">
+<span class="weather-forecast-temperature-max"> 18° </span>
+<span class="weather-forecast-temperature-min"> 12° </span>
+</div>
+<div>Warm</div>
+</div>
+
+`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();

@@ -30,13 +30,13 @@ span {
   width: 25px;
 }
 
-.weather_day,
+.weather-forecast,
 .main_weather_day {
   display: block;
   text-align: center;
 }
 
-.weather_day {
+.weather-forecast {
   font-size: small;
 }
 
@@ -78,6 +78,20 @@ a {
   cursor: default;
 }
 
+.name {
+  font-size: 13px;
+  color: #000;
+  opacity: 55%;
+}
+
 .main_weather_day .active:hover {
   text-decoration: none;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.5;
+}
+
+.weather-forecast-temperatures {
+  font-size: 13px;
 }
